@@ -13,18 +13,26 @@ class MyComponents extends React.Component {
 		})
 	}
 
+	handleClickButton = () => {
+		console.log('click the button')
+		alert('click me')
+	}
+
 	render() {
 		let name = 'Hai';
 		return (
 			<>
-				<div className="firstName">
+				<div className="first">
 					<input value={this.state.name} type="text"
 						onChange={(event) => this.handleOnChangeName(event)}
 					/>
 					My name is {this.state['name']}
 				</div>
-				<div className="secondName">
+				<div className="second">
 					im from class {this.state.class}
+				</div>
+				<div className="third">
+					<button onClick={() => this.handleClickButton()}>click me</button>
 				</div>
 			</>
 		)
