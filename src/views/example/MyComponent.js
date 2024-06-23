@@ -9,7 +9,8 @@ class MyComponents extends React.Component {
 
 	handleOnChangeName = (event) => {
 		this.setState({
-			name: event.target.value
+			name: event.target.value,
+			class: event.target.value
 		})
 	}
 
@@ -26,7 +27,7 @@ class MyComponents extends React.Component {
 					<input value={this.state.name} type="text"
 						onChange={(event) => this.handleOnChangeName(event)}
 					/>
-					My name is {this.state['name']}
+					My name is {this.state.name}
 				</div>
 				<div className="second">
 					im from class {this.state.class}
