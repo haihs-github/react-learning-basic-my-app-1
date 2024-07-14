@@ -6,16 +6,24 @@ class MyComponent extends React.Component {
 
 	state = {
 		arrJobs: [
-			{ id: 'abcjob1', title: 'Dev', salary: '500$' },
-			{ id: 'abcjob2', title: 'Tester', salary: '600$' },
-			{ id: 'abcjob3', title: 'PM', salary: '1000$' }
+			{ id: 'abcjob1', title: 'Dev', salary: '500' },
+			{ id: 'abcjob2', title: 'Tester', salary: '600' },
+			{ id: 'abcjob3', title: 'PM', salary: '1000' }
 		]
 	}
 
 	addNewJob = (job) => {
 		console.log('check job from parent')
 		this.setState({
-			arrJobs: [...this.state.arrJobs, job]
+			arrJobs: this.state.arrJobs.concat(job)
+		})
+	}
+
+	deleteJob = (job) => {
+		let currentJobs = this.state.arrJobs
+		currentJobs = currentJobs.filter(item => item.id !== job.id)
+		this.setState({
+			arrJobs: currentJobs
 		})
 	}
 
@@ -28,6 +36,7 @@ class MyComponent extends React.Component {
 				/>
 				<ChildComponent
 					arrJobs={this.state.arrJobs}
+					deleteJob={this.deleteJob}
 				/>
 			</>
 		)
