@@ -27,7 +27,16 @@ class MyComponent extends React.Component {
 		})
 	}
 
+	componentDidUpdate(prevProps, prevState) {
+		console.log('>>>run componentDidUpdate', 'prevState', prevState, 'current state', this.state)
+	}
+
+	componentDidMount() {
+		console.log('>>>run componentDidMount')
+	}
+
 	render() {
+		console.log('>>>run render')
 		let name = 'Hai';
 		return (
 			<>

@@ -1,0 +1,2 @@
+video #20: react lifecycle methods
+thứ tự chạy hàm render -> componentDidMount(call API) -> componentDidUpdate
