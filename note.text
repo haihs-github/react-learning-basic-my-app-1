@@ -1,2 +1,11 @@
 video #20: react lifecycle methods
 thứ tự chạy hàm render -> componentDidMount(call API) -> componentDidUpdate
+
+video #21.1: ToDo APP PRO với React.JS - CREATE/READ
+dowload toastify: npm install --save react-toastify
+
+video #21.2: ToDo APP PRO với React.JS - DELETE/EDIT
+if in react: {dk && <if command>}
+if/else in reactL: {dk ? <if command> : <else command>}
+check obj rỗng: Object.keys(editTodo).length === 0
+copy trong JS: let <tenBien> = {...<tenObj}/ [...<tenMang>]
