@@ -66,6 +66,7 @@ class ListTodo extends React.Component {
 		console.log(editTodo, isEmptyObj)
 		return (
 			<>
+				<p>SIMPLE TODO APP WITH REACT!</p>
 				<div className="list-todo-container">
 					<AddTodo
 						addNewTodo={this.addNewTodo}
