@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from "./views/example/Home.js"
 import ListTodo from "./views/todos/ListTodo.js"
 import MyComponent from "./views/example/MyComponent.js"
-
+import ListUser from "./views/User/ListUser.js"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,8 +15,10 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
+          <Route path="Home" element={<Home />} />
           <Route path="Todo" element={<ListTodo />} />
           <Route path="About" element={<MyComponent />} />
+          <Route path="User" element={<ListUser />} />
         </Route>
       </Routes>
     </BrowserRouter>

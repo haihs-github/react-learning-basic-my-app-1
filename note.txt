@@ -1,25 +1,42 @@
+// note chung
+	Tên file & thư mục Viết Hoa chữ cái đầu và theo quy chuẩn con lạc đà
+
 // video #20: react lifecycle methods
-thứ tự chạy hàm render -> componentDidMount(call API) -> componentDidUpdate
+	thứ tự chạy hàm render -> componentDidMount(call API) -> componentDidUpdate
 
 // video #21.1: ToDo APP PRO với React.JS - CREATE/READ
-dowload toastify: npm install --save react-toastify
+	dowload toastify: npm install --save react-toastify
 
 // video #21.2: ToDo APP PRO với React.JS - DELETE/EDIT
-if in react: {dk && <if command>}
-if/else in reactL: {dk ? <if command> : <else command>}
-check obj rỗng: Object.keys(editTodo).length === 0
-copy trong JS: let <tenBien> = {...<tenObj}/ [...<tenMang>]
+	if in react: {dk && <if command>}
+	if/else in reactL: {dk ? <if command> : <else command>}
+	check obj rỗng: Object.keys(editTodo).length === 0
+	copy trong JS: let <tenBien> = {...<tenObj}/ [...<tenMang>]
 
-video #22 React Routers - Điều hướng trang với reactJs
-download react-router-dom: npm install react-router-dom --force
-setup: in file index.js or main.js -> import { BrowserRouter } from 'react-router-dom' -> bọc <BrowserRouter> <App /> </BrowserRouter>
-một số component chính của react-router-dom:
-	<BrowserRouter> //component chính qly các Routes
-		<Routes>
-			<Route path="/link" elememt={<component/>} /> //render component dựa theo url
-		</Routes>
-	</BrowserRouter>
-	<Link to="/link">Dashboard</Link> = <a href="/link">Dashboard</a>
-	<Outlet /> //Nếu muốn hiển thị componet mà ko mất đi component app
-	video để xem kỹ hơn: https://www.youtube.com/watch?v=Hp_PuLVj14E
+// video #22 React Routers - Điều hướng trang với reactJs
+	download react-router-dom: npm install react-router-dom --force
+	setup: in file index.js or main.js -> import { BrowserRouter } from 'react-router-dom' -> bọc <BrowserRouter> <App /> </BrowserRouter>
+	một số component chính của react-router-dom:
+		<BrowserRouter> //component chính qly các Routes
+			<Routes>
+				<Route path="/link" elememt={<component/>} /> //render component dựa theo url
+			</Routes>
+		</BrowserRouter>
+		<Link to="/link">Dashboard</Link> = <a href="/link">Dashboard</a>
+		<Outlet /> //Nếu muốn hiển thị componet mà ko mất đi component app
+		video để xem kỹ hơn: https://www.youtube.com/watch?v=Hp_PuLVj14E
 
+// video #23 Links & NavLinks Trong React.JS Routers
+	sử dụng <NavLink to="/link" activeClassName="active">Dashboard<NavLink>
+
+// video#26 Sử Dụng Axios Để Gửi Request API từ React.js
+	cách dùng axios:
+		componentDidMount() {
+			axios.get("https://reqres.in/api/users?page=1") //lấy ra api
+				.then(res => { // lấy ra res (api)
+					this.setState({
+						ListUsers: res && res.data && res.data.data ? res.data.data : [] // cập nhật mảng user bằng với res.data.data
+					}
+					)
+				})
+		}

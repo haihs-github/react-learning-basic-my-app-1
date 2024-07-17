@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css'; //import toastify để làm th�
 import Nav from './Nav/Nav.js';
 import Home from './example/Home.js';
 import { Outlet, Link } from "react-router-dom"
+import ListUser from "./User/ListUser.js"
 
 function App() {
   return (
@@ -13,9 +14,10 @@ function App() {
       <header className="App-header">
         <Nav />
         <img src={logo} className="App-logo" alt="logo" />
-        <Home />
         <Outlet />
       </header>
+
+
       <ToastContainer
         position="top-right"
         autoClose={5000}
