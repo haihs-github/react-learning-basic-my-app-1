@@ -23,7 +23,7 @@
 			</Routes>
 		</BrowserRouter>
 		<Link to="/link">Dashboard</Link> = <a href="/link">Dashboard</a>
-		<Outlet /> //Nếu muốn hiển thị componet mà ko mất đi component app
+		<Outlet /> // cần có trong component cha, nếu muốn component cha hiển thị khi url chỏ đến thằng con
 		video để xem kỹ hơn: https://www.youtube.com/watch?v=Hp_PuLVj14E
 
 // video #23 Links & NavLinks Trong React.JS Routers
@@ -40,3 +40,4 @@
 					)
 				})
 		}
+// video #27 Route parameters - Sử Dụng Tham Số Trên URL

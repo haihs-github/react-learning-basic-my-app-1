@@ -8,6 +8,7 @@ import Home from "./views/example/Home.js"
 import ListTodo from "./views/todos/ListTodo.js"
 import MyComponent from "./views/example/MyComponent.js"
 import ListUser from "./views/User/ListUser.js"
+import DetailUser from './views/User/DetailUesr.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,7 +19,8 @@ root.render(
           <Route path="Home" element={<Home />} />
           <Route path="Todo" element={<ListTodo />} />
           <Route path="About" element={<MyComponent />} />
-          <Route path="User" element={<ListUser />} />
+          <Route path="User" excat element={<ListUser />} />
+          <Route path="User/:id" element={<DetailUser />} />
         </Route>
       </Routes>
     </BrowserRouter>

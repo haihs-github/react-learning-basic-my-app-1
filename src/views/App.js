@@ -7,6 +7,7 @@ import Nav from './Nav/Nav.js';
 import Home from './example/Home.js';
 import { Outlet, Link } from "react-router-dom"
 import ListUser from "./User/ListUser.js"
+import DetailUser from './User/DetailUesr.js';
 
 function App() {
   return (
