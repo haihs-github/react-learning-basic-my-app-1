@@ -70,6 +70,19 @@
 		b3: sử dụng ảnh như một biến
 // #30 Why Redux
 // #31 Redux Stores, Actions, Reducers
+// #32 Setup Redux into React project
+	install redux: npm install @reduxjs/toolkit --legacy-peer-deps
+	install react-redux: npm install react-redux --legacy-peer-deps
+	thêm những dòng config này vào file index.js
+		import { Provider } from 'react-redux'
+		import { configureStore } from '@reduxjs/toolkit'
+		import rootReducer from './store/reducers/rootReducer.js'
+	tạo thêm thư mục action và reducers trong thư mục store -> trong thư mục reducers tạo file rootReducer.js
+	bọc dưới <React.StrictMode> bằng thẻ <Provider store={reduxStore}></Provider>
+	và thêm dòng này const reduxStore = configureStore(rootReducer)
+
+
+
 
 
 
