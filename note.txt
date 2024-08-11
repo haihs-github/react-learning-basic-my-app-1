@@ -40,4 +40,36 @@
 					)
 				})
 		}
+
 // video #27 Route parameters - Sử Dụng Tham Số Trên URL
+	từ react v6 thì withRouter đã bị khai tử nhưng ta có mẹo để dùng các props của HOC withRouter bằng cách sử dụng hook như sau
+		import { useParams } from "react-router-dom";
+
+		thêm hàm ngoài class 
+		const withParams = (Component) => (props) => {
+			const params = useParams();
+			return <Component {...props} params={params} />;
+		};
+
+		lấy ra dùng
+		let id = this.props.params.id
+
+		bọc vào như HOC
+		export default withParams(DetailUser);
+	
+	cách sử dung url tham số
+		dùng Route
+          <Route path="User/:id" element={<DetailUser />} />
+		  /:id để biết tham số là id
+
+// #28 Route SWitch Tags 
+// #29 Importing Image		  
+	Cách import ảnh trong react 
+		b1: nhét ảnh vào thư mục access
+		b2: import <ảnh>.png from <src>
+		b3: sử dụng ảnh như một biến
+// #30 Why Redux
+// #31 Redux Stores, Actions, Reducers
+
+
+
